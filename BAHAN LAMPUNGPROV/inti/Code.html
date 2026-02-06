@@ -1,0 +1,405 @@
+<!-- Remake Landing Page Website Lampungprov.go.id
+
+By: Indra Nata Buana & Muhamad Iqbal Hafidho
+
+UIN Raden Intan Lampung - SAINTEK23 -->
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal LampungProv</title>
+   
+  <link rel="stylesheet" href="Code.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+  <header class="top-bar">
+    <div class="header-left-group">
+      <img src="L_baru P.png" alt="Logo" class="top-logo">
+      <div class="top-text">
+        <strong>PEMERINTAH DAERAH<br>PROVINSI LAMPUNG</strong>
+      </div>
+    </div>
+
+    <div class="top-right">
+      <div class="widget-clean">
+        <div class="clean-item text-right">
+          <div class="jam-wrapper">
+             <span id="jam-digital" class="angka-besar">00:00:00</span>
+             <span class="zona-waktu">WIB</span>
+          </div>
+          <div class="tanggal-wrapper">
+             <i class="fa-regular fa-calendar"></i> <span id="tanggal-sekarang">Memuat...</span>
+          </div>
+        </div>
+
+        <div class="clean-divider"></div>
+
+        <div class="clean-item text-left">
+          <div class="suhu-wrapper">
+             <i class="fa-solid fa-cloud-sun icon-weather-big"></i>
+             <span class="angka-suhu">29°C</span>
+          </div>
+          <div class="lokasi-kecil">Bandar Lampung</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="floating-logos-wrapper">
+      <img src="LIN.png" alt="Lampung-In" class="logo-lin">
+      
+      <img src="FF.png" alt="Logo FOILA" class="logo-foila">
+  </div>
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="opening27.mp4" type="video/mp4">
+    </video>
+    
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+      <div class="hero-left-wrapper">
+        <img src="KL27.png" alt="Logo Siger" class="hero-siger">
+      </div>
+      
+      <div class="hero-right">
+        <p class="label-sering">Sering Dicari</p>
+        <div class="quick-links">
+          <button>Pelayanan Publik</button>
+          <button>Informasi Keuangan</button>
+          <button>Pariwisata Lampung</button>
+          <button>Kanal Pengaduan</button>
+        </div>
+      
+        <h2 class="hero-title">Menjawab Kebutuhan Informasi Warga Lampung</h2>
+        <p class="hero-desc">Temukan layanan publik dari pemerintah daerah Provinsi Lampung</p>
+      
+        <div class="search-container">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input type="text" placeholder="Cari informasi di sini...">
+          <button class="btn-cari">Cari</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="custom-shape-divider-bottom">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 150" preserveAspectRatio="none">
+        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+        <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+        <path d="M0,0V15.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+        </svg>
+    </div>
+  </section>
+
+  <section class="layanan-utama">
+   <div class="container-modern">
+   
+      <div class="news-wrapper">
+        <div class="section-header">
+          <h2 class="judul-modern">Kabar Terkini</h2>
+          <a href="#" class="link-semua">Lihat Semua <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="news-grid-layout">
+          <article class="news-big">
+            <div class="news-img-big" style="background-image: url('KB.webp');">
+              <div class="news-overlay">
+                <span class="badge-date">Baru Saja</span>
+                <h3><a href="#">Gubernur Lampung Sampaikan Kamis Beradat</a></h3>
+                <p>Hari Kamis Wajib Menggunakan Pakaian adat Khusus nya adat Lampung</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="news-small">
+            <div class="news-img-small" style="background-image: url('CF.png');"></div>
+            <div class="news-info">
+              <span class="date-small">19 Jan 2026</span>
+              <h4><a href="#">Festival Kopi Lampung Barat Kembali Digelar</a></h4>
+            </div>
+          </article>
+
+          <article class="news-small">
+            <div class="news-img-small" style="background-image: url('RT.jpg');"></div>
+            <div class="news-info">
+              <span class="date-small">18 Jan 2025</span>
+              <h4><a href="#">Pemprov Gelar Pasar Murah Jelang Ramadhan</a></h4>
+            </div>
+          </article>
+        </div>
+
+        <div class="wisata-card">
+          <div class="wisata-bg" style="background-image: url('PW.jpg');"></div>
+          <div class="wisata-content">
+            <span class="tag-wisata">#ExploreLampung</span>
+            <h3>Surga Tersembunyi di Ujung Sumatera</h3>
+            <p>Nikmati keindahan pantai pasir putih, lumba-lumba Teluk Kiluan, hingga gajah Way Kambas.</p>
+            <a href="#" class="btn-jelajahi">Jelajahi Destinasi <i class="fa-solid fa-arrow-right-long"></i></a>
+          </div>
+        </div>
+      </div> 
+      
+      <aside class="services-sidebar">
+        <div class="services-card-glass">
+          <div class="services-header">
+            <i class="fa-solid fa-layer-group"></i>
+            <h3>Akses Layanan</h3>
+          </div>
+          
+          <div class="grid-layanan-compact">
+            <a href="#" class="item-layanan">
+              <div class="icon-circle"><i class="fa-regular fa-building"></i></div>
+              <span>Layanan Publik</span>
+            </a>
+      
+            <a href="#" class="item-layanan">
+              <div class="icon-circle"><i class="fa-solid fa-file"></i></div>
+              <span>Open Data</span>
+            </a>
+      
+            <a href="#" class="item-layanan">
+              <div class="icon-circle"><i class="fa-solid fa-hotel"></i></div>
+              <span>Tata Kelola</span>
+            </a>
+      
+            <a href="#" class="item-layanan">
+              <div class="icon-circle"><i class="fa-solid fa-map-location-dot"></i></div>
+              <span>Pariwisata</span>
+            </a>
+      
+            <a href="#" class="item-layanan">
+              <div class="icon-circle"><i class="fa-solid fa-square-parking"></i></div>
+              <span>PPID Utama</span>
+            </a>
+      
+            <a href="#" class="item-layanan">
+              <div class="icon-circle"><i class="fa-solid fa-shield-halved"></i></div>
+              <span>CSIRT Lampung</span>
+            </a>
+      
+            <a href="#" class="item-layanan">
+              <div class="icon-circle"><i class="fa-solid fa-gear"></i></div>
+              <span>Sistem Penghubung</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="social-media-card">
+          <div class="services-header social-header-gap">
+            <i class="fa-solid fa-share-nodes icon-title"></i>
+            <h3>Ikuti Kami</h3>
+          </div>
+        
+          <div class="social-grid">
+            <a href="#" class="social-item instagram">
+              <div class="social-icon"><i class="fa-brands fa-instagram"></i></div>
+              <span class="s-name">pemprovlampung_</span>
+            </a>
+        
+            <a href="#" class="social-item facebook">
+              <div class="social-icon"><i class="fa-brands fa-facebook-f"></i></div>
+              <span class="s-name">Pemerintah Provinsi Lampung</span>
+            </a>
+        
+            <a href="#" class="social-item youtube">
+              <div class="social-icon"><i class="fa-brands fa-youtube"></i></div>
+              <span class="s-name">Provinsi Lampung</span>
+            </a>
+        
+            <a href="#" class="social-item twitter">
+              <div class="social-icon"><i class="fa-brands fa-x-twitter"></i></div>
+              <span class="s-name">pemprov_lampung</span>
+            </a>
+          </div>
+        </div>
+        
+      </aside>
+
+   </div> 
+  </section>
+
+
+  <a href="#" class="btn-to-top" id="btnBackToTop">
+    <i class="fa-solid fa-arrow-up"></i>
+  </a>
+
+  <div id="modalLayanan" class="modal-overlay">
+    <div class="modal-box">
+      <span class="close-btn">&times;</span>
+      <div class="modal-header">
+        <div class="modal-icon-circle" id="modalIcon">
+          <i class="fa-solid fa-info"></i>
+        </div>
+        <h3 id="modalTitle">Judul Layanan</h3>
+      </div>
+      <div class="modal-line"></div>
+      <div class="modal-body">
+        <p id="modalDesc">Keterangan layanan akan muncul di sini.</p>
+        <div class="modal-action">
+          <a href="#" class="btn-akses">Akses Sekarang <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      
+      function updateWaktu() {
+        const now = new Date();
+        let h = now.getHours(); let m = now.getMinutes(); let s = now.getSeconds();
+        h = h < 10 ? "0" + h : h; m = m < 10 ? "0" + m : m; s = s < 10 ? "0" + s : s;
+        const jamEl = document.getElementById("jam-digital");
+        if (jamEl) jamEl.innerText = h + ":" + m + ":" + s;
+
+        const namaHari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+        const namaBulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+        const tanggalEl = document.getElementById("tanggal-sekarang");
+        if (tanggalEl) tanggalEl.innerText = `${namaHari[now.getDay()]}, ${now.getDate()} ${namaBulan[now.getMonth()]} ${now.getFullYear()}`;
+      }
+      setInterval(updateWaktu, 1000);
+      updateWaktu();
+
+      const elemenAnimasi = document.querySelectorAll('.news-big, .news-small, .wisata-card, .services-card-glass, .footer-col');
+      elemenAnimasi.forEach(el => el.classList.add('reveal'));
+
+      function cekScroll() {
+        const triggerBottom = window.innerHeight * 0.85;
+        elemenAnimasi.forEach(el => {
+          const boxTop = el.getBoundingClientRect().top;
+          if (boxTop < triggerBottom) el.classList.add('active');
+        });
+      }
+      window.addEventListener('scroll', cekScroll);
+      cekScroll();
+
+      const heroSection = document.querySelector('.hero');
+      const sigerImg = document.querySelector('.hero-siger');
+      if (heroSection && sigerImg) {
+        heroSection.addEventListener('mousemove', (e) => {
+          const x = (window.innerWidth - e.pageX * 2) / 90;
+          const y = (window.innerHeight - e.pageY * 2) / 90;
+          sigerImg.style.transform = `translateX(${x}px) translateY(${y}px)`;
+        });
+        heroSection.addEventListener('mouseleave', () => {
+          sigerImg.style.transform = `translateX(0) translateY(0)`;
+        });
+      }
+
+      const toTopBtn = document.getElementById("btnBackToTop");
+      if (toTopBtn) {
+          window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) toTopBtn.classList.add("show");
+            else toTopBtn.classList.remove("show");
+          });
+          toTopBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          });
+      }
+
+      const infoLayanan = {
+        "Layanan Publik": { judul: "Layanan E-KTP", desc: "Informasi pembuatan KTP Elektronik baru.", icon: "fa-building" },
+        "Open Data": { judul: "Open Data Lampung", desc: "Portal data terbuka pemerintah provinsi.", icon: "fa-file" },
+        "Tata Kelola": { judul: "Pemerintahan", desc: "Informasi tata kelola pemerintahan.", icon: "fa-hotel" },
+        "Pariwisata": { judul: "Pariwisata", desc: "Destinasi wisata unggulan di Lampung.", icon: "fa-map-location-dot" },
+        "Apps Pemprov": { judul: "Aplikasi Pemprov", desc: "Daftar aplikasi digital layanan publik.", icon: "fa-mobile-screen" },
+        "PPID Utama": { judul: "PPID Utama", desc: "Layanan informasi publik terpadu.", icon: "fa-solid fa-square-parking" },
+        "CSIRT Lampung": { judul: "CSIRT Lampung", desc: "Tim Tanggap Insiden Siber.", icon: "fa-solid fa-shield-halved" },
+        "Sistem Penghubung": { judul: "Sistem Penghubung", desc: "Integrasi layanan pemerintah.", icon:"fa-solid fa-gear" }
+      };
+
+      const modalOverlay = document.getElementById("modalLayanan");
+      const closeModal = document.querySelector(".close-btn");
+      const mTitle = document.getElementById("modalTitle");
+      const mDesc = document.getElementById("modalDesc");
+      const mIcon = document.getElementById("modalIcon");
+      const tombolLayanan = document.querySelectorAll(".item-layanan");
+
+      if(modalOverlay) {
+          tombolLayanan.forEach(tombol => {
+            tombol.addEventListener("click", function(e) {
+              e.preventDefault();
+              const namaLayanan = this.querySelector("span").innerText;
+              let data = infoLayanan[namaLayanan];
+              
+              if (data) {
+                mTitle.innerText = data.judul;
+                mDesc.innerText = data.desc;
+                mIcon.innerHTML = `<i class="fa-solid ${data.icon}"></i>`;
+                modalOverlay.classList.add("active");
+              }
+            });
+          });
+          closeModal.addEventListener("click", () => modalOverlay.classList.remove("active"));
+          modalOverlay.addEventListener("click", (e) => {
+            if (e.target === modalOverlay) modalOverlay.classList.remove("active");
+          });
+      }      
+    });
+  </script>
+
+<script>
+
+  document.addEventListener("DOMContentLoaded", function() {
+    
+    const searchInput = document.querySelector('.search-container input');
+    const searchBtn = document.querySelector('.btn-cari');
+
+    const layananItems = document.querySelectorAll('.grid-layanan-compact .item-layanan');
+
+    function filterLayanan() {
+
+      const filterValue = searchInput.value.toLowerCase();
+
+      layananItems.forEach(item => {
+
+        const itemText = item.querySelector('span').textContent.toLowerCase();
+
+        if (itemText.includes(filterValue)) {
+          item.style.display = "flex";
+        } else {
+          item.style.display = "none";
+        }
+      });
+    }
+
+    searchInput.addEventListener('keyup', filterLayanan);
+
+    searchBtn.addEventListener('click', function() {
+      filterLayanan();
+
+      document.querySelector('.services-sidebar').scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+    });
+
+    const quickButtons = document.querySelectorAll('.quick-links button');
+    
+    quickButtons.forEach(btn => {
+      btn.addEventListener('click', function() {
+
+        const textTombol = this.innerText;
+        searchInput.value = textTombol;
+        
+        filterLayanan();
+        
+        document.querySelector('.services-sidebar').scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'center' 
+        });
+      });
+    });
+
+  });
+</script>
+
+</body>
+</html>

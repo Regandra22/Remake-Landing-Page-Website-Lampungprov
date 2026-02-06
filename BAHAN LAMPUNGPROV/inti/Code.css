@@ -1,0 +1,1486 @@
+/* Remake Landing Page Website Lampungprov.go.id
+
+By: Indra Nata Buana & Muhamad Iqbal Hafidho
+
+UIN Raden Intan Lampung - SAINTEK23 */
+   
+   
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+   
+  body {
+    padding-top: 80px;
+    background-color: #ffffff;
+    overflow-x: clip !important;
+  }
+  
+ 
+  .top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    background-color: #2b276c;
+    background-image: url("header.png");
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    background-position: center;
+    background-blend-mode: multiply;
+  }
+  
+  .header-left-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .top-logo {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+  }
+  
+  .top-text strong {
+    font-size: 14px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    line-height: 1.2;
+    display: block;
+    color: #fff;
+  }
+  
+  /* --- Widget Kanan (Jam & Cuaca) --- */
+  .top-right {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-end;
+  }
+  
+  .widget-clean {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #ffffff;
+  }
+  
+  .text-right {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .text-left {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .jam-wrapper {
+    margin-bottom: 2px;
+  }
+  
+  .angka-besar {
+    font-family: sans-serif;
+    font-size: 26px;
+    font-weight: 800;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .zona-waktu {
+    font-size: 11px;
+    font-weight: bold;
+    color: #e62802;
+    margin-left: 3px;
+  }
+  
+  .tanggal-wrapper {
+    font-size: 11px;
+    font-weight: 500;
+    opacity: 0.9;
+  }
+  
+  .tanggal-wrapper i {
+    color: #f5c400;
+    margin-right: 4px;
+  }
+  
+  .clean-divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.4);
+  }
+  
+  .suhu-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .icon-weather-big {
+    font-size: 22px;
+    color: #0494d1;
+  }
+  
+  .angka-suhu {
+    font-size: 22px;
+    font-weight: 700;
+  }
+  
+  .lokasi-kecil {
+    font-size: 11px;
+    opacity: 0.9;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+  
+  @media (max-width: 900px) {
+    .top-right {
+      display: none;
+    }
+  }
+  
+  /* =========================================
+     3. HERO SECTION (BANNER UTAMA)
+     ========================================= */
+  .hero {
+    position: relative;
+    min-height: 600px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+  
+  .hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+  
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+    color: white;
+  }
+  
+  .hero-left-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .hero-siger {
+    position: relative;
+    left: -4px;
+    width: 170%;
+    max-width: 700px;
+    height: auto;
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.5));
+    transition: transform 0.1s ease-out;
+    will-change: transform;
+  }
+  
+  .hero-right {
+    flex: 1.2;
+    padding-top: 20px;
+    margin-left: 200px;
+    margin-right: 0;
+  }
+  
+  .label-sering {
+    font-size: 14px;
+    margin-bottom: 10px;
+    opacity: 0.9;
+    font-weight: bold;
+  }
+  
+  /* --- Quick Links (Tombol Kuning Kecil) --- */
+  .quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+  
+  .quick-links button {
+    background: #f5c400;
+    color: #000;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .quick-links button:hover {
+    background: #fff;
+    transform: translateY(-2px);
+  }
+  
+  .hero-title {
+    font-size: 40px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    font-weight: 800;
+    text-shadow: 0 2px 4px rgba(1, 255, 64, 0.5);
+  }
+  
+  .hero-desc {
+    font-size: 16px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+    line-height: 1.5;
+  }
+  
+  /* --- Search Bar --- */
+  .search-container {
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(50, 21, 213, 0.8);
+    border-radius: 50px;
+    padding: 5px 5px 5px 20px;
+    width: 100%;
+    max-width: 500px;
+    backdrop-filter: blur(5px);
+  }
+  
+  .search-icon {
+    color: #f5c400;
+    margin-right: 15px;
+    font-size: 18px;
+  }
+  
+  .search-container input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    font-size: 16px;
+  }
+  
+  .search-container input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .btn-cari {
+    background: #ffffff;
+    color: black;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .btn-cari:hover {
+    background: #f5c400;
+  }
+  
+  /* --- Logo Melayang (LIN & FOILA) --- */
+  .floating-logos-wrapper {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    pointer-events: none;
+  }
+  
+  .logo-lin,
+  .logo-foila {
+    height: auto;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease;
+  }
+  
+  /* Atur ukuran masing-masing logo */
+  .logo-lin {
+    width: 100px;
+  }
+  
+  .logo-foila {
+    width: 50px;
+  }
+  
+  .floating-logos-wrapper img:hover {
+    transform: scale(1.1);
+    pointer-events: auto;
+  }
+  
+  /* --- Shape Divider (Ombak Bawah) --- */
+  .custom-shape-divider-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    z-index: 5;
+  }
+  
+  .custom-shape-divider-bottom svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 100px);
+    height: 120px;
+  }
+  
+  .custom-shape-divider-bottom .shape-fill {
+    fill: #f5c400;
+  }
+  
+  .custom-shape-divider-bottom svg path:nth-child(1) {
+    animation: gerakKiri 12s ease-in-out infinite;
+  }
+  
+  .custom-shape-divider-bottom svg path:nth-child(2) {
+    animation: gerakKanan 8s ease-in-out infinite;
+  }
+  
+  .custom-shape-divider-bottom svg path:nth-child(3) {
+    animation: gerakKiri 5s ease-in-out infinite;
+  }
+  
+  @keyframes gerakKiri {
+    0% { transform: translateX(0) scaleY(1); }
+    50% { transform: translateX(-50px) scaleY(0.9); }
+    100% { transform: translateX(0) scaleY(1); }
+  }
+  
+  @keyframes gerakKanan {
+    0% { transform: translateX(0) scaleY(1); }
+    50% { transform: translateX(50px) scaleY(1.15); }
+    100% { transform: translateX(0) scaleY(1); }
+  }
+  
+  /* =========================================
+     4. LAYOUT UTAMA (BERITA & SIDEBAR)
+     ========================================= */
+  .layanan-utama {
+    padding: 80px 20px 100px;
+    position: relative;
+    z-index: 10;
+    background: linear-gradient(to bottom, #f5c400 0%, #ffffff 40%, #f5c400 100%);
+    overflow: visible !important;
+  }
+  
+  .container-modern {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 50px;
+    position: relative;
+    overflow: visible !important;
+  }
+  
+  /* --- Bagian Berita (Kiri) --- */
+  .news-wrapper {
+    flex: 2;
+    width: 100%;
+  }
+  
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #eeeeee;
+    padding-bottom: 10px;
+  }
+  
+  .judul-modern {
+    font-size: 28px;
+    font-weight: 800;
+    color: #2b276c;
+    position: relative;
+  }
+  
+  .judul-modern::after {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: #ffffff;
+    border-radius: 2px;
+  }
+  
+  .link-semua {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+  }
+  
+  .link-semua:hover {
+    color: #2b276c;
+  }
+  
+  /* --- Grid Berita --- */
+  .news-grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 20px;
+  }
+  
+  /* Berita Besar */
+  .news-big {
+    grid-column: 1 / -1;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+    transition: 0.3s;
+  }
+  
+  .news-img-big {
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: transform 0.5s ease;
+  }
+  
+  .news-big:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  }
+  
+  .news-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    color: white;
+  }
+  
+  .badge-date {
+    background: #f5c400;
+    color: black;
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 4px;
+    text-transform: uppercase;
+  }
+  
+  .news-overlay h3 a {
+    display: block;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    margin: 10px 0;
+    font-weight: 800;
+    line-height: 1.3;
+  }
+  
+  .news-overlay p {
+    font-size: 14px;
+    opacity: 0.9;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  /* Berita Kecil */
+  .news-small {
+    display: flex;
+    gap: 15px;
+    background: #2b276c;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: 0.3s;
+    border: none;
+  }
+  
+  .news-small:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  }
+  
+  .news-img-small {
+    width: 90px;
+    height: 90px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    flex-shrink: 0;
+  }
+  
+  .news-info h4 a {
+    text-decoration: none;
+    color: #f5c400;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.4;
+    transition: 0.2s;
+  }
+  
+  .news-info h4 a:hover {
+    color: #f11d05;
+  }
+  
+  .date-small {
+    font-size: 12px;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  /* --- Wisata Card --- */
+  .wisata-card {
+    margin-top: 60px;
+    position: relative;
+    width: 100%;
+    height: 280px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    background-color: #333;
+  }
+  
+  .wisata-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 3s ease;
+  }
+  
+  .wisata-card:hover .wisata-bg {
+    transform: scale(1.1);
+  }
+  
+  .wisata-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.2) 100%);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+  }
+  
+  .tag-wisata {
+    background: #f5c400;
+    color: #000;
+    font-weight: 800;
+    font-size: 11px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+  }
+  
+  .wisata-content h3 {
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 12px;
+    max-width: 70%;
+    line-height: 1.3;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  .wisata-content p {
+    font-size: 15px;
+    opacity: 0.9;
+    max-width: 60%;
+    margin-bottom: 25px;
+    line-height: 1.6;
+  }
+  
+  .btn-jelajahi {
+    text-decoration: none;
+    background: white;
+    color: #000;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .btn-jelajahi:hover {
+    background: #f5c400;
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(245, 196, 0, 0.4);
+  }
+  
+  /* --- Sidebar & Services (Kanan) --- */
+  .services-sidebar {
+    flex: 0 0 380px !important;
+    width: 1000px !important;
+    position: relative !important;
+    top: auto !important;
+    align-self: flex-start !important;
+    margin-top: -0px !important;
+    z-index: 20;
+  }
+  
+  .services-card-glass {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  }
+  
+  .services-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+    color: #333;
+  }
+  
+  .services-header h3 {
+    font-size: 19px;
+    font-weight: 800;
+    color: #2b276c;
+    margin: 0;
+  }
+  
+  .services-header i {
+    color: #2b276c;
+    font-size: 26px;
+  }
+  
+  .grid-layanan-compact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .item-layanan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    color: #555;
+    background: #f8f8f8;
+    padding: 20px 10px;
+    border-radius: 15px;
+    transition: 0.3s;
+    border: 1px solid transparent;
+    height: 100%;
+    min-height: 130px;
+  }
+  
+  .item-layanan span {
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.3;
+    margin-top: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    width: 100%;
+  }
+  
+  
+  /* Definisi Keyframes */
+  @keyframes kilau-lewat {
+    0% { left: -150%; }
+    20% { left: 150%; }
+    100% { left: 150%; }
+  }
+  
+  @keyframes goyang-santuy {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+  }
+  
+  @keyframes goyang-heboh {
+    0% { transform: rotate(0deg) scale(1.1); }
+    25% { transform: rotate(-15deg) scale(1.1); }
+    50% { transform: rotate(0deg) scale(1.1); }
+    75% { transform: rotate(15deg) scale(1.1); }
+    100% { transform: rotate(0deg) scale(1.1); }
+  }
+  
+  /* Icon Circle (Keadaan Diam/Idle) */
+  .icon-circle {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 26px;
+  
+    /* Warna Biru Transparan */
+    background: rgba(43, 39, 108, 0.1) !important;
+    color: #2b276c !important;
+  
+    /* Animasi Goyang Santuy */
+    animation: goyang-santuy 1s ease-in-out infinite;
+  }
+  
+  /* Efek Kilau (Sheen) */
+  .icon-circle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.8) 50%, transparent 100%);
+    transform: skewX(-25deg);
+    animation: kilau-lewat 3s infinite;
+  }
+  
+  /* Efek Hover (Saat Disentuh Mouse) */
+  .item-layanan:hover {
+    background: white;
+    border-color: #f5c400;
+    box-shadow: 0 5px 15px rgba(245, 196, 0, 0.2);
+    transform: translateY(-3px);
+  }
+  
+  .item-layanan:hover .icon-circle {
+    background: #f5c400 !important;
+    color: #000 !important;
+    animation: goyang-heboh 0.5s ease-in-out infinite;
+    overflow: visible;
+    box-shadow: 0 0 15px rgba(245, 196, 0, 0.6);
+  }
+  
+  .item-layanan:hover .icon-circle::before {
+    display: none;
+  }
+  
+
+  .social-media-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1);
+    margin-top: 15px;
+  }
+  
+  .social-header-gap {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: none;
+    position: relative;
+    padding-bottom: 8px;
+  }
+  
+  .social-header-gap::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, rgba(245, 0, 0, 0.5), rgba(255, 255, 255, 0));
+  }
+  
+  .icon-title {
+    color: #f50000;
+    font-size: 16px;
+    filter: drop-shadow(0 2px 4px rgba(245, 0, 0, 0.2));
+  }
+  
+  .social-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  
+  .social-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    background: rgba(244, 246, 248, 0.8);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 8px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  
+  .social-icon {
+    width: 27px;
+    height: 27px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: #666;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+  }
+  
+  .s-name {
+    font-weight: 700;
+    font-size: 13px;
+    color: #555;
+    transition: color 0.3s ease;
+  }
+  
+  .social-item:hover {
+    transform: translateY(-3px);
+    background: #fff;
+    border-color: transparent;
+    box-shadow: 0 5px 15px -3px rgba(0, 0, 0, 0.15);
+  }
+  
+  .social-item:hover .social-icon {
+    color: white;
+  }
+  
+  /* Warna-warni Hover Sosmed */
+  .social-item.instagram:hover .social-icon {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    box-shadow: 0 4px 10px rgba(220, 39, 67, 0.4);
+  }
+  
+  .social-item.instagram:hover .s-name {
+    color: #dc2743;
+  }
+  
+  .social-item.facebook:hover .social-icon {
+    background: #1877f2;
+    box-shadow: 0 4px 10px rgba(24, 119, 242, 0.4);
+  }
+  
+  .social-item.facebook:hover .s-name {
+    color: #1877f2;
+  }
+  
+  .social-item.youtube:hover .social-icon {
+    background: #ff0000;
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.4);
+  }
+  
+  .social-item.youtube:hover .s-name {
+    color: #ff0000;
+  }
+  
+  .social-item.twitter:hover .social-icon {
+    background: #000000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  }
+  
+  .social-item.twitter:hover .s-name {
+    color: #000000;
+  }
+ 
+ 
+  
+  /* Animasi Reveal Scroll */
+  .reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+    will-change: opacity, transform;
+  }
+  
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .footer-col.reveal {
+    transition-delay: 0.1s;
+  }
+  
+  .footer-col:nth-child(2).reveal {
+    transition-delay: 0.2s;
+  }
+  
+  .footer-col:nth-child(3).reveal {
+    transition-delay: 0.3s;
+  }
+  
+  /* Tombol Back to Top */
+  .btn-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #f5c400;
+    color: #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 20px;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-to-top:hover {
+    background: #222;
+    color: #f5c400;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  .btn-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  
+  /* Modal Box */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 2000;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-overlay.active {
+    display: flex;
+    opacity: 1;
+  }
+  
+  .modal-box {
+    background: #fff;
+    width: 90%;
+    max-width: 450px;
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    transform: scale(0.8);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .modal-overlay.active .modal-box {
+    transform: scale(1);
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    color: #999;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .close-btn:hover {
+    color: #f50000;
+    transform: rotate(90deg);
+  }
+  
+  .modal-icon-circle {
+    width: 70px;
+    height: 70px;
+    background: #fff5cc;
+    color: #f5c400;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin: 0 auto 15px;
+  }
+  
+  .modal-header h3 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .modal-line {
+    height: 1px;
+    background: #eee;
+    margin: 0 20px 20px;
+  }
+  
+  .modal-body p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+  
+  /* Animasi Tombol Akses Heboh */
+  @keyframes tombol-heboh {
+    0% { transform: scale(1) rotate(0deg); box-shadow: 0 0 0 0 rgba(245, 196, 0, 0.7); }
+    10% { transform: scale(1.1) rotate(-3deg); }
+    20% { transform: scale(1.1) rotate(3deg); }
+    30% { transform: scale(1.1) rotate(-3deg); box-shadow: 0 0 20px 10px rgba(245, 196, 0, 0); }
+    40% { transform: scale(1.1) rotate(3deg); }
+    50% { transform: scale(1.1) rotate(0deg); }
+    100% { transform: scale(1) rotate(0deg); box-shadow: 0 0 0 0 rgba(245, 196, 0, 0); }
+  }
+  
+  @keyframes warna-jalan {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  @keyframes panah-nunjuk {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(5px, -5px); }
+  }
+  
+  .btn-akses {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(45deg, #f5c400, #ffd700, #ffeb3b, #f5c400);
+    background-size: 300% 300%;
+    color: #000;
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid #fff;
+    animation: tombol-heboh 2s ease-in-out infinite, warna-jalan 3s ease infinite;
+    transition: all 0.3s;
+  }
+  
+  .btn-akses i {
+    font-size: 18px;
+    animation: panah-nunjuk 0.8s ease-in-out infinite;
+  }
+  
+  .btn-akses:hover {
+    background: #000;
+    color: #f5c400;
+    border-color: #f5c400;
+    transform: scale(1.15);
+    box-shadow: 0 0 30px rgba(245, 196, 0, 0.8);
+    animation: none;
+  }
+ 
+ /* Responship HP */
+@media (max-width: 900px) {
+
+  
+  .top-bar {
+    height: 80px; 
+    padding: 0 20px;
+  }
+
+  .top-logo {
+    height: 40px;  
+  }
+
+  .top-text strong {
+    font-size: 12px;    
+  }
+  
+  .top-right {
+    display: none; 
+  }
+
+  .container-modern {
+    flex-direction: column !important;
+    gap: 30px;
+    padding: 0 15px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+
+    padding-top: 120px; 
+    padding-bottom: 120px;
+    gap: 15px;
+  }
+
+  .hero-left-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+
+  .hero-siger {
+    width: 85%;
+    max-width: 350px;
+    height: auto;
+    filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.3));
+    left: 0;
+  }
+
+  .hero-right {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Urutan 1: Judul */
+  .hero-title {
+    order: 1;
+    font-size: 22px;
+    line-height: 1.3;
+    margin-bottom: 8px;
+    width: 100%;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+  }
+
+  /* Urutan 2: Deskripsi */
+  .hero-desc {
+    order: 2;
+    font-size: 13px;
+    margin-bottom: 20px;
+    padding: 0 10px;
+    line-height: 1.5;
+  }
+
+  /* Urutan 3: Search Bar */
+  .search-container {
+    order: 3;
+    width: 95%;
+    margin: 0 auto 25px;
+    background: rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 50;
+  }
+
+  .search-container input {
+    font-size: 14px;
+  }
+
+  .btn-cari {
+    padding: 10px 22px;
+    font-size: 13px;
+  }
+
+  /* Urutan 4: Label "Sering Dicari" */
+  .label-sering {
+    order: 4;
+    font-size: 10px;
+    margin-bottom: 8px;
+    color: #f5c400;
+    text-transform: uppercase;
+    font-weight: 800;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+  }
+
+  /* Urutan 5: Tombol (Paling Bawah) */
+  .quick-links {
+    order: 5;
+    width: 100%;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 0;
+  }
+
+  .quick-links button {
+    font-size: 10px;
+    padding: 6px 12px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: white;
+    backdrop-filter: blur(4px);
+  }
+
+
+  .floating-logos-wrapper {
+    top: 20px; 
+    right: 15px;
+    gap: 6px;
+    align-items: center;
+  }
+
+  .logo-lin {
+    width: 35px;
+  }
+
+  .logo-foila {
+    width: 45px;
+  }
+
+  .services-sidebar {
+    order: -1;
+    width: 100% !important;
+    margin-top: -35px !important;
+  }
+
+  .services-card-glass {
+    padding: 15px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: none;
+  }
+
+  .grid-layanan-compact {
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+    padding: 5px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .grid-layanan-compact::-webkit-scrollbar {
+    display: none;
+  }
+
+  .item-layanan {
+    min-width: 90px;
+    max-width: 90px;
+    padding: 15px 5px;
+    border-radius: 12px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    min-height: 110px;
+  }
+
+  .icon-circle {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .item-layanan span {
+    font-size: 10px;
+    line-height: 1.3;
+    height: 2.6em;
+  }
+
+  .news-wrapper {
+    order: 2;
+    width: 100%;
+  }
+
+  .judul-modern {
+    font-size: 18px;
+  }
+
+  .section-header {
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+  }
+
+  .news-grid-layout {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  /* Berita Besar Pendek */
+  .news-img-big {
+    height: 150px;
+  }
+
+  .news-overlay {
+    padding: 15px;
+  }
+
+  .news-overlay h3 a {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+
+  .badge-date {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+
+  /* Berita Kecil */
+  .news-small {
+    padding: 10px;
+    gap: 10px;
+    border-radius: 10px;
+    align-items: center;
+  }
+
+  .news-img-small {
+    width: 65px;
+    height: 65px;
+    border-radius: 6px;
+  }
+
+  .news-info h4 a {
+    font-size: 13px;
+    line-height: 1.3;
+  }
+
+  .date-small {
+    font-size: 11px;
+    margin-bottom: 2px;
+  }
+
+  /* --- G. WISATA (COMPACT) --- */
+  .wisata-card {
+    height: auto;
+    flex-direction: column;
+    margin-top: 20px;
+    border-radius: 15px;
+    position: relative;
+  }
+
+  .wisata-bg {
+    position: relative !important;
+    width: 100%;
+    height: 140px;
+  }
+
+  .wisata-content {
+    padding: 20px;
+    background: #222;
+    position: relative;
+    z-index: 2;
+  }
+
+  .wisata-content h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .wisata-content p {
+    font-size: 12px;
+    margin-bottom: 15px;
+    max-width: 100%;
+    line-height: 1.4;
+  }
+
+  .btn-jelajahi {
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  /* --- H. SOSMED & FOOTER --- */
+  .social-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+  }
+
+  .social-item {
+    padding: 8px;
+    justify-content: center;
+  }
+
+  .social-item .s-name {
+    display: none;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 30px;
+    padding: 30px 20px;
+  }
+
+  .footer-logo {
+    height: 45px;
+    margin: 0 auto 10px;
+    display: block;
+  }
+}
